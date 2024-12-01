@@ -1,25 +1,28 @@
 /*
-    Solver:Arko7
+    Solver: Arko7
+    Date: 2024-07-10 18:00:50
 
 */
+
+/*Creating Words*/
 
 #include<bits/stdc++.h>
 using namespace std;
 
 void solve()
 {
-    int n;
-    cin>>n;
-    vector<int> v(n);
+    string a,b;
+    cin>>a>>b;
 
-    int cal=0;
-    for(auto &x: v){
-        cin>>x;
-
-        cal=cal/x+1;
-        cal*=x;
+    for(int i=0;i<3;i++)
+    {
+        if(i==0){
+            swap(a[i],b[i]);
+        }
+        break;
     }
-    cout<<cal<<"\n";
+
+    cout<<a<<" "<<b<<"\n";
 }
 
 int main() 
@@ -28,8 +31,7 @@ int main()
 	cin.tie(0); cout.tie(0);
  
 	/*Test case*/
-	// int t=1;
-    int t;
+	int t;
 	cin>>t;
 	for(int i=1;i<=t;i++) 
     {

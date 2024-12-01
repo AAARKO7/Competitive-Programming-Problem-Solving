@@ -1,25 +1,32 @@
 /*
     Solver:Arko7
+    Date:
 
 */
+
+/**/
 
 #include<bits/stdc++.h>
 using namespace std;
 
 void solve()
 {
-    int n;
-    cin>>n;
-    vector<int> v(n);
+    int n,m;
+    cin>>n>>m;
 
-    int cal=0;
-    for(auto &x: v){
-        cin>>x;
+    vector<int> a(n);
+    vector<int> b(m);
 
-        cal=cal/x+1;
-        cal*=x;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
     }
-    cout<<cal<<"\n";
+
+    sort(a.begin(), a.end());
+
+    for(int i=0;i<m;i++){
+        cin>>b[i];
+    }
+
 }
 
 int main() 
@@ -28,8 +35,7 @@ int main()
 	cin.tie(0); cout.tie(0);
  
 	/*Test case*/
-	// int t=1;
-    int t;
+	int t=1;
 	cin>>t;
 	for(int i=1;i<=t;i++) 
     {

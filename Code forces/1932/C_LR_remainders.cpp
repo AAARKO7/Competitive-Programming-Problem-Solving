@@ -1,5 +1,5 @@
 /*
-    Solver:Arko7
+    Solver:
 
 */
 
@@ -8,18 +8,18 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin>>n;
+    int n,m;
+    cin>>n>>m;
+
     vector<int> v(n);
 
-    int cal=0;
     for(auto &x: v){
         cin>>x;
-
-        cal=cal/x+1;
-        cal*=x;
     }
-    cout<<cal<<"\n";
+
+    string s;
+    cin>>s;
+    
 }
 
 int main() 
@@ -28,8 +28,7 @@ int main()
 	cin.tie(0); cout.tie(0);
  
 	/*Test case*/
-	// int t=1;
-    int t;
+	int t=1;
 	cin>>t;
 	for(int i=1;i<=t;i++) 
     {

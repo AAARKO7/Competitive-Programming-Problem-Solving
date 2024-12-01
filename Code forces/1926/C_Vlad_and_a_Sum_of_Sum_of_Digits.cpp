@@ -1,52 +1,50 @@
-/**
- 	user 	: Arko7
-    Solved  : 2024-02-19 20:46:18
-**/
+/*
+    Solver: Arko7
+
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
 
-#define fastIO cin.tie(0)->sync_with_stdio(0)
+const int MAX= 200007;
 
-int T=1;
+int final[MAX];
 
-int sumOfDigits(int n) 
-{
-    int sum = 0;
-    while (n > 0) 
-    {
-        sum += n % 10;
-        n /= 10;
+int SumofDigits(int n){
+    
+    int sum=0;
+    while(n>0){
+        sum+=n%10;
+        n/=10;
     }
     return sum;
 }
 
-void solve() 
+void solve()
 {
-        int n;
-        cin >> n;
-        
-        int sum = 0;
-        for (int i = 1; i <= n; ++i) 
-        {
-            sum += sumOfDigits(i);
-        }
-        
-        cout<<sum;
+    int n;
+    cin>>n;
+
+    cout<<final[n]<<'\n';
 }
 
 int main() 
 {
-	fastIO;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
 
-	cin>>T;
-
-	for(int t=1;t<=T;t++) 
-	{
-		//cout<<"Case #"<<t<<": ";
+    final[0]=0;
+    for(int i=1;i<MAX;i++){
+        final[i]=final[i - 1]+SumofDigits(i);
+    }
+	/*Test case*/
+	int t;
+	cin>>t;
+	for(int i=1;i<=t;i++) 
+    {
+		//cout<<"case #"<<i<<": ";
 		solve();
-        cout<<endl;
 	}
-	
+ 
 	return 0;
 }
